@@ -1,11 +1,7 @@
-const express = require('express');
-const app = express();
-
-const userController = require('./userController.js');
-
 const db = require('../models/db2.js');
 
 const User = require('../models/userModel.js');
+const Instance = require('../models/instanceModel.js');
 
 const loginController = {
 
@@ -22,7 +18,11 @@ const loginController = {
 		db.findOne(User, query1, null, function(x) {
             console.log(query1);
             if(x != null){
-                console.log("success");
+                db.insertOne(Instance,{
+                    uuName: u
+                });
+                console.log(u + ' successfully logged in');
+
                 res.redirect('/user/' + x.uuName);
             }
             else{

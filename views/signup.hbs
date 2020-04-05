@@ -18,20 +18,19 @@
 			<p id="header">DLSU PROFS TO PICK</p>
 			<div class="line"></div>
 			<div>
-				<form>
+				<form method="post">
 					<fieldset>
 						<legend align="center">Create your account</legend>
 						
-						<input type="email" 	name="email" 	id="email" 	placeholder ="email">
-						<input type="text" 		name="name" 	id="name" 	placeholder ="name">
-						<input type="text" 		name="uName" 	id="uName" 	placeholder ="username">
-						<input type="text" 		name="course" 	id="course" placeholder ="course">
-						<input type="text" 		name="id" 		id="id" 	placeholder ="ID number">
-						<input type="password" 	name="pass" 	id="pass" 	placeholder ="password">
-						<input type="password" 	name="cpass" 	id="cpass" 	placeholder ="confirm password">
+						<input type="email" 	name="email" 	id="email" 	placeholder="email"		required>
+						<input type="text" 		name="name" 	id="name" 	placeholder="name"		required>
+						<input type="text" 		name="uuName" 	id="uuName" placeholder="username"	required>
+						<input type="text" 		name="course" 	id="course" placeholder="course"	required>
+						<input type="text" 		name="id" 		id="id" 	placeholder="ID number"	required>
+						<input type="password" 	name="pass" 	id="pass" 	placeholder="password"	required>
 						
 					</fieldset>
-					<p type="submit" class="button" onclick="proxyFunc()">Sign-up</p>
+					<input type="submit" class="button" value="Sign-up">
 				</form>
 			</div>	
 			<a href="/login" class="button">Already have an account? Log-in</a>

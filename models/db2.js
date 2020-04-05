@@ -4,6 +4,7 @@ const url = 'mongodb://localhost:27017/profsToPickDB';
 const Faculty = require('./facultyModel.js');
 const User = require('./userModel.js');
 const Review = require('./reviewModel.js');
+const Instance = require('./instanceModel.js');
 
 const options = {
     useUnifiedTopology: true,
@@ -47,7 +48,7 @@ const database = {
         model.find(query, projection, function(error, result) {
             if(error) throw error;
             console.log("Found: " + result.length);
-            console.log(result);
+            //console.log(result);
             
         }).sort(sort).limit(limit).exec(function(err, result){
             if(err) throw err;
