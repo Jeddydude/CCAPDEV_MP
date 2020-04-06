@@ -606,7 +606,7 @@ body{
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		margin: 0px 0px 20px 0px;
+		margin: 0px 0px 5px 0px;
 	}
 	
 	#outBox legend{
@@ -680,6 +680,15 @@ body{
 		font-size : xxx-large;
 		margin: 0px;
 	}
+
+	#error{
+		margin: -5px 0px 5px 0px;
+
+		text-align: center;
+		color: red;
+		font-family: "Source Sans Pro";
+		font-weight: bold;
+	}
 	
 	.button:hover{
 		background-color: #77dd77;
@@ -695,6 +704,17 @@ body{
 		opacity: 0.6;
 	}
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> login.outbox END */
+	
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> signup.outbox START */
+	#success{
+		margin: -5px 0px 5px 0px;
+
+		text-align: center;
+		color: green;
+		font-family: "Source Sans Pro";
+		font-weight: bold;
+	}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> signup.outbox END */
 
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> logout.outbox END */

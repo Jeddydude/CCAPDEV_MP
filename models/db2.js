@@ -38,7 +38,7 @@ const database = {
         model.findOne(query, projection, function(error, result) {
             if(error) throw error;
             console.log(query);
-            console.log('Found One: ');
+            console.log('Found This: ');
             console.log(result);
             return callback(result);
         });

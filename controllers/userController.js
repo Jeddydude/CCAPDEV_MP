@@ -36,7 +36,7 @@ const userController = {
 	getLoggedUser: function (req, res) {
 
 		db.findMany(Instance, null, {_id:-1}, null, 1, function(u){
-			console.log(u[0].uuName);
+			
 			var query1 = {uuName: u[0].uuName};
 			db.findOne(User, query1, null, function(x) {
 

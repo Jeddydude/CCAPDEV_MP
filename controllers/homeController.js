@@ -12,6 +12,8 @@ const homeController = {
 			db.findMany(Review, null, {_id:1}, null, 4, function(y){
 				
 				res.render('home', {
+                    thisHome: "this",
+                    
                     revEntries:y,
 
                     topImagePath:x[0].dpPath,

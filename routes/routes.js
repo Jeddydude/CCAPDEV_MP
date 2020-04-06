@@ -7,7 +7,8 @@ const userController = require('../controllers/userController.js');
 const viewController = require('../controllers/viewController.js');
 const loginController = require('../controllers/loginController.js');
 const homeController = require('../controllers/homeController.js');
-const signupController = require('../controllers/signupController.js')
+const signupController = require('../controllers/signupController.js');
+const logoutController = require('../controllers/logoutController.js');
 
 app.get('/', loginController.getLogin);
 
@@ -22,19 +23,27 @@ app.get('/signup', signupController.getSignUp);
 
 app.post('/signup', signupController.postSignUp);
 
+app.get('/signupCheck', signupController.checkUsername);
 
-app.get('/logout', function(req, res){
-	res.render('logout');
-});
+
+
+app.get('/logout', logoutController.getLogout);
 
 app.get('/home', homeController.getHome);
+
+
 
 app.get('/user/:uuName', userController.getUser);
 
 app.get('/user/', userController.getLoggedUser);
 
+
+
 app.get('/view', viewController.getFaculties);
 
+
 app.get('/faculty/:fuName', facultyController.getFaculty);
+
+app.post('faculty/:fuName', facultyController.postReview);
 
 module.exports = app;

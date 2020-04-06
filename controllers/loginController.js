@@ -6,7 +6,7 @@ const Instance = require('../models/instanceModel.js');
 const loginController = {
 
     getLogin: function (req, res) {
-        res.render('login');
+        res.render('login',{error:"hidden"});
     },
 
     postLogin: function (req, res) {
@@ -23,7 +23,7 @@ const loginController = {
                 });
                 console.log(u + ' successfully logged in');
 
-                res.redirect('/user/' + x.uuName);
+                res.redirect('/user/');
             }
             else{
                 res.render('login');

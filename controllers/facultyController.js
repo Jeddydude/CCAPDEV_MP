@@ -34,6 +34,10 @@ const facultyController = {
 			
         });
 		
+	},
+
+	postReview: function (req, res) {
+		
 	}
 }
 
