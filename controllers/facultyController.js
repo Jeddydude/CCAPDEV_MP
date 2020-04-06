@@ -12,25 +12,31 @@ const facultyController = {
 		var query1 = {fuName: u};
 		db.findOne(Faculty, query1, null, function(x) {
 			
-			var query2 = {reviewee_u: u};
-			db.findMany(Review, query2, {reviewee:1}, null, 0, function(y){
-				
-				res.render('faculty', {
-					fuName: x.fuName,
-	
-					dpPath: x.dpPath,
+			if(x != null){
+				var query2 = {reviewee_u: u};
+				db.findMany(Review, query2, {reviewee:1}, null, 0, function(y){
+					
+					res.render('faculty', {
+						fuName: x.fuName,
+		
+						dpPath: x.dpPath,
 
-					name: x.name,
-					email: x.email,
-					college: x.college,
-					department: x.department,
-					oaRating: x.oaRating,
-					
-					subjects: x.subjects,
-					
-					revEntries: y
+						name: x.name,
+						email: x.email,
+						college: x.college,
+						department: x.department,
+						oaRating: x.oaRating,
+						
+						subjects: x.subjects,
+						
+						revEntries: y
+					});
 				});
-			});
+			}
+			else{
+				console.log('Faculty Not Found');
+				res.render('error');
+			}
 			
         });
 		

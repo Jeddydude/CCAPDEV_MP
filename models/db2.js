@@ -85,8 +85,7 @@ const database = {
     deleteMany: function(model, conditions) {
         model.deleteMany(conditions, function (error, result) {
             if(error) throw error;
-            console.log('Document deleted: ' + result.deletedCount);
-            mongoose.close();
+            console.log('Documents deleted: ' + result.deletedCount);
         });
     }
 

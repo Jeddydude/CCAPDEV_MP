@@ -37,6 +37,10 @@ app.get('/user/:uuName', userController.getUser);
 
 app.get('/user/', userController.getLoggedUser);
 
+app.get('/authorityCheck', userController.checkAuthority);
+
+app.get('/deleteReview', userController.deleteReview);
+
 
 
 app.get('/view', viewController.getFaculties);

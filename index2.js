@@ -14,14 +14,11 @@ const db = require('./models/db2.js');
 
 app.use(express.urlencoded({extended: true}));
 
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> navigation START
 app.use('/', routes);
 
 app.use(function (req, res) {
-    console.log('Page Not Found');
     res.render('error');
 });
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> navigation END
 
 db.connect();
 
