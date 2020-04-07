@@ -99,13 +99,26 @@ profsToPickDB.insertOne(Faculty, faculty);
 
 var user = {
 	uuName: "Jeddy the gouf",
-	password: "qwerty",
+	password: "asd",
 	
 	dpPath: "dp.jpg",
 	
 	name: "Jedwig Siegfrid Tan",
 	id: "11828102",
 	email: "jedwig_siegfrid_tan@dlsu.edu.ph",
+	course: "BS Computer Science",
+}
+profsToPickDB.insertOne(User, user);
+
+var user = {
+	uuName: "Ygg",
+	password: "asd",
+	
+	dpPath: "default.jpg",
+	
+	name: "Salvador Tan",
+	id: "118",
+	email: "salvador_tan@dlsu.edu.ph",
 	course: "BS Computer Science",
 }
 profsToPickDB.insertOne(User, user);
@@ -170,6 +183,18 @@ var review = {
 	revCourse: "GERPHIS",
 	revStar: 0.5,
 	revDet:"He knows his stuff but teaches everything but the subject itself. also very hassle and belittles students. also gave me a death threat"
+}
+profsToPickDB.insertOne(Review, review);
+
+var review = {
+	reviewee_u:"prof0",
+	
+	imagePath:"default.jpg",
+	reviewer:"Ygg",
+	reviewee:"Arren Matthew C. Antioquia",
+	revCourse: "CCAPDEV",
+	revStar: 5.0,
+	revDet:"Very calming teaching style, you'll learn a lot!!"
 }
 profsToPickDB.insertOne(Review, review);
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> reviews END */

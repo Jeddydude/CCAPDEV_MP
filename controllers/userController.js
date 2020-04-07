@@ -36,15 +36,16 @@ const userController = {
 					}
 					else{
 						console.log('User Not Found');
-						res.render('error');
+						res.render('error', {extra: '<br>The User may not exist here'});
 					}
 					
 				});
 			}
 			else{
-				console.log('No User Logged In');
-				res.render('error');
+				console.log('You are not logged in');
+				res.render('error', {extra: '<br>Please try logging in.'});
 			}
+
 		});
 	},
 	
@@ -78,8 +79,8 @@ const userController = {
 				});
 			}
 			else{
-				console.log('No User Logged In');
-				res.render('error');
+				console.log('You are not logged in');
+				res.render('error', {extra: '<br>Please try logging in.'});
 			}
 		});
 	},

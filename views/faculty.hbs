@@ -64,7 +64,7 @@
 							</div>
 							
 							<div class="revAbt">
-								<p class="reviewee">{{reviewee}}</p>
+								<p class="reviewee"><a class="toProf" href="/faculty/{{reviewee_u}}">{{reviewee}}</a></p>
 								<p class="revTag">{{revCourse}} ✯{{revStar}}</p>
 							</div>
 							
@@ -78,11 +78,17 @@
 		
 		<script type="text/javascript">
 			function submit(){
-				window.location = "/result";
+
+				var key = $('#searchBar').children('#searchKey').val();
+
+				window.location = "../result?key=" + key;
 			};
-			
-			$("[type='number']").keypress(function (evt) {
-				evt.preventDefault();
+
+			$('input').on('keydown', function(event) {
+				var x = event.which;
+				if (x === 13) {
+					event.preventDefault();
+				}
 			});
 		</script>
 	</body>

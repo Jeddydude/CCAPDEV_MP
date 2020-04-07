@@ -5,7 +5,7 @@ $(document).ready(function () {
     $.get('/authorityCheck', {uuName:uuName}, function (result) {
         
         if(result.uuName != uuName){
-            $("p.buttonX").hide("fast");
+            $("p.buttonX").hide(0.001);
         }
 
     });

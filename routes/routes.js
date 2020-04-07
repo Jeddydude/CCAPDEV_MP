@@ -9,6 +9,7 @@ const loginController = require('../controllers/loginController.js');
 const homeController = require('../controllers/homeController.js');
 const signupController = require('../controllers/signupController.js');
 const logoutController = require('../controllers/logoutController.js');
+const resultsController = require('../controllers/resultsController.js');
 
 app.get('/', loginController.getLogin);
 
@@ -28,6 +29,8 @@ app.get('/signupCheck', signupController.checkUsername);
 
 
 app.get('/logout', logoutController.getLogout);
+
+app.get('/result', resultsController.getResults);
 
 app.get('/home', homeController.getHome);
 
