@@ -1,5 +1,3 @@
 # CCAPDEV_MP
-
-# wow
-crazy man!
+Group11_S12
 
