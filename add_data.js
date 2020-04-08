@@ -190,7 +190,6 @@ var faculty = {
 		{subject:"CCPROG1", rating:2.0 }
 	],
 }
-profsToPickDB.insertOne(Faculty, faculty);
 
 
 profsToPickDB.insertOne(Faculty, faculty);
