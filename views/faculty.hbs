@@ -47,11 +47,11 @@
 			</div>
 			
 			<div id="reviews">
-				<form>
+				<form method="post">
 					<textarea id="review" placeholder="Write your review here..." required></textarea>
 					<input type="text" id="course" maxlength="10" placeholder="Course code" size="10" required>
 					<input type="number" id="stars" min="0" max="5" step="0.5" required>
-					<input type="button" id="submit" value="Submit">
+					<input type="submit" id="submit" value="Submit">
 				</form>
 				
 				<div id="reviewBox">
@@ -61,11 +61,10 @@
 							<div class="revAbt">
 								<img src="../images/{{imagePath}}" class="dpIcon" width="40" height="40">
 								<p class="reviewer"><a href="/user/{{reviewer}}">{{reviewer}}</a></p>
-								<p ondblclick="delete()" class="buttonX">X</p>
 							</div>
 							
 							<div class="revAbt">
-								<p class="reviewee">{{reviewee}}</p>
+								<p class="reviewee"><a class="toProf" href="/faculty/{{reviewee_u}}">{{reviewee}}</a></p>
 								<p class="revTag">{{revCourse}} ✯{{revStar}}</p>
 							</div>
 							
@@ -78,33 +77,18 @@
 		</div>
 		
 		<script type="text/javascript">
-			$("#submits").click(function() {
-				$("#reviewBox").append(	"<div class='revEntry'>" +
-											"<div class='revAbt'>" +
-												"<img src='../images/{{imagePath}}' class='dpIcon' width='40' height='40'>" +
-												"<p class='reviewer'><a href='/user/{{reviewer}}'>{{reviewer}}</a></p>" +
-												"<p ondblclick='delete()' class='buttonX'>X</p>" +
-											"</div>" +
-											
-											"<div class='revAbt'>" +
-												"<p class='reviewee'>{{reviewee}}</p>" +
-												"<p class='revTag'>" + $("#course").val() + " ✯" + $("#stars").val() + "</p>" +
-											"</div>" +
-											
-											"<p class='revDet'>" + $("#review").val() + "</p>" +
-										"</div>");
-			});
-			
-			$('#reviewBox').on('dblclick', '.revEntry', function() {
-				$(this).remove();
-			});
-			
 			function submit(){
-				window.location = "/result";
+
+				var key = $('#searchBar').children('#searchKey').val();
+
+				window.location = "../result?key=" + key;
 			};
-			
-			$("[type='number']").keypress(function (evt) {
-				evt.preventDefault();
+
+			$('input').on('keydown', function(event) {
+				var x = event.which;
+				if (x === 13) {
+					event.preventDefault();
+				}
 			});
 		</script>
 	</body>

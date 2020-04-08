@@ -38,7 +38,7 @@ const database = {
         model.findOne(query, projection, function(error, result) {
             if(error) throw error;
             console.log(query);
-            console.log('Found One: ');
+            console.log('Found This: ');
             console.log(result);
             return callback(result);
         });
@@ -85,8 +85,7 @@ const database = {
     deleteMany: function(model, conditions) {
         model.deleteMany(conditions, function (error, result) {
             if(error) throw error;
-            console.log('Document deleted: ' + result.deletedCount);
-            mongoose.close();
+            console.log('Documents deleted: ' + result.deletedCount);
         });
     }
 

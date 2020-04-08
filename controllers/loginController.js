@@ -6,7 +6,10 @@ const Instance = require('../models/instanceModel.js');
 const loginController = {
 
     getLogin: function (req, res) {
-        res.render('login');
+
+        db.deleteMany(Instance, null);
+
+        res.render('login',{error:"hidden"});
     },
 
     postLogin: function (req, res) {
@@ -16,14 +19,14 @@ const loginController = {
 
         var query1 = {uuName: u, password: p};
 		db.findOne(User, query1, null, function(x) {
-            console.log(query1);
+            
             if(x != null){
                 db.insertOne(Instance,{
                     uuName: u
                 });
-                console.log(u + ' successfully logged in');
+                console.log(u + ' Successfully Logged In');
 
-                res.redirect('/user/' + x.uuName);
+                res.redirect('/user/');
             }
             else{
                 res.render('login');

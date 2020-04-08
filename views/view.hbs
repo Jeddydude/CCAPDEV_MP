@@ -91,8 +91,18 @@
 		
 		<script type="text/javascript">
 			function submit(){
-				window.location = "/result";
+
+				var key = $('#searchBar').children('#searchKey').val();
+
+				window.location = "../result?key=" + key;
 			};
+
+			$('input').on('keydown', function(event) {
+				var x = event.which;
+				if (x === 13) {
+					event.preventDefault();
+				}
+			});
 		</script>
 	</body>
 </html>

@@ -345,6 +345,7 @@ var user = {
 }
 profsToPickDB.insertOne(User, user);
 
+
 var user = {
 	uuName: "silverioalysson",
 	password: "aly",
@@ -472,6 +473,7 @@ var review = {
 }
 profsToPickDB.insertOne(Review, review);
 
+
 var review = {
 	reviewee_u:"arlenepascasio",
 	
@@ -531,9 +533,5 @@ var review = {
 	revDet:"Sakto lang naman, you get something i guess",
 }
 profsToPickDB.insertOne(Review, review);
-
-
-
-
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> reviews END */

@@ -132,6 +132,18 @@ body{
 		
 		box-shadow: 5px 5px grey;
 	}
+
+	#searchB{
+		background-color: darkgrey;
+		border: none;
+		margin: 0px;
+		padding: 1px;
+		width: 30px;
+
+		color: white;
+
+		box-shadow: 5px 5px grey;
+	}
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Navigation Bar END */
 
 
@@ -208,6 +220,20 @@ body{
 		font-weight: bold;
 		text-decoration: none;
 	}
+
+	.toProf{
+		display: block;
+
+		background-color: #77dd77;
+		margin: 0px 5px;
+		padding: 5px;
+		border-radius: 5px;
+
+		color: grey;
+		font-family: "Source Sans Pro";
+		text-align: center;
+		text-decoration: none;
+	}
 	
 	.box {
 		display: flex;
@@ -258,7 +284,7 @@ body{
 		height: 20px;
 	}
 	
-	.revTag, .reviewee, .revDet{
+	.revTag, .revDet{
 		background-color: #77dd77;
 		margin: 2px 5px;
 		padding: 5px;
@@ -266,8 +292,12 @@ body{
 		color: grey;
 	}
 
-	.revTag{
-		margin: 2px 5px 2px 0px;
+	.reviewee, #reviewBox p.reviewee{
+		background-color: grey;
+		margin: 0px;
+		padding: 0px;
+		border-radius: 5px;
+		color: grey;
 	}
 
 	.revDet{
@@ -313,11 +343,12 @@ body{
 		border-color: grey;
 		border-width: 2px;
 		border-style: solid;
-		border-radius: 5px;
+		border-radius: 7px;
 		
 		color: grey;
+		font-weight: bold;
 	}
-	
+
 	#parent {
 		display: flex;
 		justify-content: center;
@@ -360,7 +391,7 @@ body{
 		padding-left: 10px;
 		padding-right: 10px;
 		
-		text-align: left;
+		text-align: justify;
 		
 		color: white;
 		font-family: "Source Sans Pro";
@@ -606,7 +637,7 @@ body{
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		margin: 0px 0px 20px 0px;
+		margin: 0px 0px 5px 0px;
 	}
 	
 	#outBox legend{
@@ -680,6 +711,15 @@ body{
 		font-size : xxx-large;
 		margin: 0px;
 	}
+
+	#error{
+		margin: -5px 0px 5px 0px;
+
+		text-align: center;
+		color: red;
+		font-family: "Source Sans Pro";
+		font-weight: bold;
+	}
 	
 	.button:hover{
 		background-color: #77dd77;
@@ -695,6 +735,17 @@ body{
 		opacity: 0.6;
 	}
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> login.outbox END */
+	
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> signup.outbox START */
+	#success{
+		margin: -5px 0px 5px 0px;
+
+		text-align: center;
+		color: green;
+		font-family: "Source Sans Pro";
+		font-weight: bold;
+	}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> signup.outbox END */
 
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> logout.outbox END */

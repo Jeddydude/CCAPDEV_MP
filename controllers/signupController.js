@@ -5,24 +5,23 @@ const User = require('../models/userModel.js');
 const signupController = {
 
     getSignUp: function (req, res) {
-        res.render('signup');
+        res.render('signup',{success:"hidden"});
     },
 
     postSignUp: function (req, res) {
-        console.log('far as this');
+
 		var email = req.body.email;
 		var name = req.body.name;
 		var uuName = req.body.uuName;
 		var course = req.body.course;
 		var id = req.body.id;
         var pass = req.body.pass + "";
-        console.log('far as this' + pass);
 		
         db.insertOne(User, {
             uuName: uuName,
 			password: pass,
 			
-            dpPath:'dp.jpg',
+            dpPath:'default.jpg',
             
 			name: name,
             id: id,
@@ -30,8 +29,16 @@ const signupController = {
 			course: course
         });
 
-        console.log('Created account of' + id);
-        res.redirect('/user/' + uuName);
+        console.log('Created account of ' + id);
+        res.render('signup');
+    },
+
+    checkUsername: function (req, res) {
+        var uuName = req.query.uuName;
+
+        db.findOne(User, {uuName:uuName}, {uuName:1}, function (result) {
+            res.send(result);
+        });
     }
 
 }
